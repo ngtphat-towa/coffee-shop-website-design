@@ -2,35 +2,38 @@
 let menu = document.querySelector("#menu-btn");
 let navbar = document.querySelector(".navbar");
 
-menu.onclick = () => {
-  removeActive(navbar);
-  menu.classList.toggle("fa-times");
-  navbar.classList.toggle("active");
-};
-
 // CART BTN
 let cartItemContainer = document.querySelector(".cart-items-container");
 let cartBtn = document.querySelector("#cart-btn");
-
-cartBtn.onclick = () => {
-  removeActive(cartItemContainer);
-  cartItemContainer.classList.toggle("active");
-};
 
 // SEARCH
 let searchForm = document.querySelector(".search-form");
 let searchBtn = document.querySelector("#search-btn");
 
-searchBtn.onclick = () => {
-  removeActive(searchForm);
-  searchForm.classList.toggle("active");
+menu.onclick = () => {
+  showComponent(menu, navbar);
 };
 
-function removeActive(activeElement) {
+cartBtn.onclick = () => {
+  showComponent(cartBtn, cartItemContainer);
+};
+
+searchBtn.onclick = () => {
+  showComponent(searchBtn, searchForm);
+};
+
+function showComponent(btn, component) {
+  // Deactivate all other components and buttons
   let activeElements = [navbar, cartItemContainer, searchForm];
-  activeElements.forEach((element) => {
-    if (element !== activeElement && element.classList.contains("active")) {
+  let buttons = [menu, cartBtn, searchBtn];
+  activeElements.forEach((element, index) => {
+    if (element !== component && element.classList.contains("active")) {
       element.classList.remove("active");
+      buttons[index].classList.remove("fa-times");
     }
   });
+
+  // Toggle the clicked button and its component
+  btn.classList.toggle("fa-times");
+  component.classList.toggle("active");
 }
