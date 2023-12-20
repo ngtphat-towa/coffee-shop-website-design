@@ -291,6 +291,125 @@ body {
 }
 
 /* MENU */
+.menu {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url(../images/menu-bg-1.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.menu .menu-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.menu .menu-items-container .menu-item {
+  padding: 5rem;
+  text-align: center;
+  border: var(--border);
+}
+
+.menu .menu-items-container .menu-item img {
+  height: 10rem;
+}
+
+.menu .menu-items-container .menu-item h3 {
+  color: salmon;
+  font-size: 2.1rem;
+  padding: 1rem 0;
+}
+
+.menu .menu-items-container .menu-item {
+  color: whitesmoke;
+  padding: 0.5rem 0;
+}
+.menu .menu-items-container .menu-item .menu-price {
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+}
+
+.menu .menu-items-container .menu-item .menu-price span {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+
+.menu .menu-items-container .menu-item:hover {
+  background-color: antiquewhite;
+  transform: scale(1.08);
+}
+
+.menu .menu-items-container .menu-item:hover > .menu-info * {
+  color: saddlebrown;
+}
+
+/* PRODUCTS */
+.products {
+  background: linear-gradient(rgba(74, 74, 74, 0.4rgba (69, 69, 69, 0.7) 0.7)),
+    url(../images/menu-bg-1.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.products .product-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.products .product-items-container .product-item {
+  padding: 2rem;
+  text-align: center;
+  border: var(--border);
+  color: #fff;
+}
+
+.products .product-items-container .product-item .icons a {
+  height: 5rem;
+  width: 5rem;
+  font-size: 2rem;
+  line-height: 5rem;
+  border: var(--border);
+  color: #fff;
+  margin: 0.3rem;
+}
+
+.products .product-items-container .product-item .icons a:hover {
+  background: var(--main-color);
+}
+
+.products .product-items-container .product-item .image {
+  padding: 2.5rem 0;
+}
+.products .product-items-container .product-item .image img {
+  height: 25rem 0;
+}
+.products .product-items-container .product-item .product-info h3 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+.products .product-items-container .product-item .product-info .rating-point {
+  font-size: 1.5rem;
+}
+.products .product-items-container .product-item .product-info .rating-point i {
+  color: var(--main-color);
+  font-size: 1.7rem;
+}
+.products .product-items-container .product-item .product-info .product-price {
+  font-size: 2.4rem;
+}
+.products
+  .product-items-container
+  .product-item
+  .product-info
+  .product-price
+  span {
+  text-decoration: line-through;
+  font-size: 1.6rem;
+  font-weight: lighter;
+}
+
+/* REVIEW */
 
 /* media querries  */
 @media (max-width: 991px) {
