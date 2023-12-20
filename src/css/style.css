@@ -200,8 +200,8 @@ body {
   font-size: 1.5rem;
   color: var(--main-color);
 }
-.header .cart-items-container .cart-item .btn {
-  width: 100;
+.header .cart-items-container .btn {
+  width: 100%;
   text-align: center;
 }
 
@@ -253,13 +253,13 @@ body {
 }
 
 .about .row .content .title {
-  color: white;
+  color: var(--main-color);
   font-size: 3rem;
   line-height: 1.8;
 }
 
 .about .row .content p {
-  color: var(--main-color);
+  color: #eee;
   font-size: 1.5rem;
   line-height: 1.8;
   padding: 1rem 0;
@@ -292,8 +292,8 @@ body {
 
 /* MENU */
 .menu {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-    url(../images/menu-bg-1.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)),
+    url(../images/menu-bg-2.jpg) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -346,12 +346,12 @@ body {
 }
 
 /* PRODUCTS */
-.products {
-  background: linear-gradient(rgba(74, 74, 74, 0.4rgba (69, 69, 69, 0.7) 0.7)),
+/* .products {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)),
     url(../images/menu-bg-1.jpg) no-repeat;
   background-position: center;
   background-size: cover;
-}
+} */
 .products .product-items-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -415,6 +415,12 @@ body {
 }
 
 /* REVIEW */
+.review {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)),
+    url(../images/review-bg-2.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .review .review-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -548,6 +554,52 @@ body {
   font-size: 1.6rem;
   color: #ccc;
   line-height: 1.8;
+}
+/* FOOTER */
+.footer {
+  background-color: var(--black);
+  text-align: center;
+}
+.footer .share {
+  padding: 1rem 0;
+}
+.footer .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  border: var(--border);
+  margin: 0.3rem;
+  border-radius: 50%;
+}
+.footer .share a:hover {
+  background-color: var(--main-color);
+}
+.footer .links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+.footer .links a {
+  padding: 0.7rem 2rem;
+  color: #fff;
+  border: var(--border);
+  font-size: 2rem;
+}
+.footer .links a:hover {
+  color: var(--main-color);
+}
+.footer .credit {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: lighter;
+  padding: 1.5rem;
+}
+.footer .credit span {
+  color: var(--main-color);
 }
 /* media querries  */
 @media (max-width: 991px) {
