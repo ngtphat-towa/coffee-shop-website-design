@@ -504,6 +504,51 @@ body {
   text-transform: none;
   background: none;
 }
+.blogs .blogs-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.blogs .blogs-list .blog-item {
+  border: var(--border);
+}
+.blogs .blogs-list .blog-item .image {
+  height: 25rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.blogs .blogs-list .blog-item .image img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.blogs .blogs-list .blog-item:hover .image img {
+  transform: scale(1.2);
+}
+.blogs .blogs-list .blog-item .blog-summarized-content {
+  padding: 2rem;
+}
+.blogs .blogs-list .blog-item .blog-summarized-content .blog-title {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  color: #fff;
+}
+.blogs .blogs-list .blog-item .blog-summarized-content .blog-title:hover {
+  color: var(--main-color);
+}
+.blogs .blogs-list .blog-item .blog-summarized-content span {
+  color: var(--main-color);
+  display: block;
+  padding-bottom: 1rem;
+  font: 1.5rem lighter;
+}
+.blogs .blogs-list .blog-item .blog-summarized-content p {
+  font-size: 1.6rem;
+  color: #ccc;
+  line-height: 1.8;
+}
 /* media querries  */
 @media (max-width: 991px) {
   html {
